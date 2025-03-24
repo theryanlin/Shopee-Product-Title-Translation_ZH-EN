@@ -1,12 +1,12 @@
 # Translation Model Performance Analysis
 
 ## Problem Context
-- **Training Data**: 1,000 Chinese-English pairs
+- **Training Data**: 1,000 Chinese-English pairs (dev dataset)
 - **Data Quality Issues**:
-  - Title mismatches between languages
+  - Title mismatches between languages (train dataset)
   - Low-quality translations
 - **Current Results**:
-  - Pretrained model (no fine-tuning): BLEU=6.05
+  - Pretrained model (no fine-tuning): BLEU=34.33 
   - Fine-tuned model: BLEU=21.36 (with preprocessing)
   - Custom LSTM: BLEU=0
   
@@ -37,7 +37,8 @@
 
 1. **Pretrained Models Offer Strong Baselines**  
    - Achieved BLEU=34.33 *without any fine-tuning*  
-   - Most convenient solution for quick deployment  
+   - Most convenient solution for quick deployment
+   - Fine-tuning needs more data to make it accurate
 
 2. **Post-Processing is Critical for Quality**  
    - Preprocessing boosted scores by **5.7×** (6.05 → 34.33)  
